@@ -32,7 +32,7 @@
 			password: "password" //SparkMD5.hash(formState.password).toLocaleUpperCase()
 		}
 		try {
-			const res = await login(params);
+			// const res = await login(params);
 			const isRemember = false
 			const token = 'token'
 			// 保存到本地

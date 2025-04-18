@@ -5,12 +5,12 @@ import { defineStore } from 'pinia'
  * 全局状态
  */
 export const useStore = defineStore('useStore', () => {
-  // let token: any = ref(null)
-
   // **************************************
   // 声明属性
   // **************************************
   let loading = ref(false) // 全局加载状态
+  let tipVisible = ref(false) // 显示全局弹窗提示
+  let tipMessage = ref('') // 全局弹窗提示内容 
 
   // **************************************
   // 声明方法
@@ -123,5 +123,6 @@ export const useStore = defineStore('useStore', () => {
   // **************************************
   // 暴露变量和方法
   // **************************************
-  return { loading, saveToken, quickLogin, setSessionToken, getSessionToken, removeToken }
+  return { loading, tipVisible, tipMessage, 
+           saveToken, quickLogin, setSessionToken, getSessionToken, removeToken }
 })
